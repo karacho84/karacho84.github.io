@@ -19,7 +19,7 @@
   
 
     <div class="card mx-auto mt-5" style="width: 65%;">
-        <img id="image" class="img-fluid" src="bild5.png"></img>
+        <img id="image" class="img-fluid" src="bild5.jpg"></img>
         <h5 class="card-title">Photoshop?</h5>
         <p class="card-text">Was ist hier verschwunden?</p>
         <input id="inp" name="antwort"></input>
@@ -33,7 +33,7 @@
       async function btnClick() {
         var antwort = document.querySelector("#inp").value;
         if (antwort === "Vase") {
-          document.querySelector("#image").src = "bild6.png"
+          document.querySelector("#image").src = "bild6.jpg"
           await sleep(5000);
           location.href = "bild7.html";
         }

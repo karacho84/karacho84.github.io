@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Burzeltag</title>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+
+
+    <div class="card mx-auto mt-5" style="width: 65%;">
+        <svg class="img-fluid" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4460 1680">
+            <image width="4460" xlink:href="bild3.jpg"></image> 
+            <rect x="1500" y="700" fill="#fff" opacity="0" width="300" height="900" onclick="first()"></rect>
+            <rect x="3700" y="700" fill="#fff" opacity="0" width="300" height="900"  onclick="second()"></rect>
+          </svg>
+        <h5 class="card-title">Finde die Emma!</h5>
+        <p class="card-text">Es gibt nie genug von ihr :)</p>
+        <a id="btn" href="bild4.html" class="btn btn-primary disabled">Weiter geht's!</a>
+    </div>
+
+    <script type="text/javascript">
+      var firstClicked = false;
+      var secondClicked = false;
+
+      function first() {
+        firstClicked = true;
+        alert("Jawoll, eine hast du!");
+        checkButton()
+      }
+
+      function second() {
+        secondClicked = true;
+        alert("Ja!! Das ist eine Emma!");
+        checkButton();
+      }
+
+      function checkButton() {
+        if (firstClicked && secondClicked) {
+          var el = document.querySelector('#btn');
+          el.classList.remove("disabled");
+        }
+      }
+    </script>
+
+  </body>
+</html>
